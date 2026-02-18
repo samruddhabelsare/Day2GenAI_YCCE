@@ -6,7 +6,7 @@ import streamlit as st
 
 #import python builtin os 
 
-from langchain_community.llms import Ollama
+from langchain_community.llms import ollama
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 
@@ -29,3 +29,15 @@ st.title("Langchain Demo Model(Ollama)")
 # textinput box for user question 
 input_txt = st.text_input("What is your question ")
 
+# step 3 --> load ollama model 
+
+# load local gemma model
+LLM = ollama(model="gemma2:2b")
+
+# Condition - convert output model to string 
+output_parser = StrOutputParser()
+
+# create langchain pipeline (prompt --> model --> output_parser )
+chain = prompt | LLM | output_parser 
+
+ 
