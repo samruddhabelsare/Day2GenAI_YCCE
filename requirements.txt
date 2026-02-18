@@ -1,0 +1,30 @@
+streamlit
+#streamlit is used to build a web UI for your Python App 
+#create buttons ,textboxes , chat input , etx
+
+
+langchain
+#langchain is a framework for our application
+#uses LLM's , documents , embeddings , prompts , chains
+
+
+langchain-community
+# we are using community for extra integration maintained by this library 
+# for ex - ollama connectors , document loaders , hugging face embeddings 
+
+
+langchain-core
+# core building blocks of langchain
+# runnables , output parsers , prompt templates 
+
+
+ollama
+# runs LLM's locally 
+
+# langchain talks to ollama and ollama talks to model 
+# in one line  
+# streamlit --> UI
+# langchain --> AI
+# langchain-community --> integration 
+# langchain-core --> internal engine 
+# ollama --> local LLM runner
